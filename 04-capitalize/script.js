@@ -8,6 +8,13 @@
 
 function capitalize(str) {
     // Напишите код здесь
+    let array = str.split(' ');
+    let result = '';
+    array.forEach(element => {
+        result = result.concat(element.slice(0,1).toUpperCase(), element.slice(1), ' ')    
+    });
+    
+    return result.trim();
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

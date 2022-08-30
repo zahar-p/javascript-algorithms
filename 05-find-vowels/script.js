@@ -9,8 +9,23 @@
  *
 */
 
+const arr =  ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'];
 function findVowels(str) {
     // Напишите код здесь
+    let cnt = 0;
+    const tmp = str.toLowerCase();
+    arr.forEach(element => {
+        let pos = -1;
+        while( true ) {
+            pos = tmp.indexOf(element, pos + 1)
+            if( pos >= 0) {
+                cnt++;
+            } else {
+                break;
+            } 
+        }
+    });
+    return cnt;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

@@ -10,6 +10,22 @@
 
 function sumOfTwo(arr, sum) {
     // Напишите код здесь
+    let start = 0;
+    let end = arr.length - 1;
+
+    while (start < end) {
+        const sumtmp = arr[start] + arr[end];
+        if (sumtmp === sum) {
+            return true;
+        }
+        if (sumtmp > sum) {
+            end--;
+        } else {
+            start++;
+        }
+    }
+    return false;
+
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

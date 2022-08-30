@@ -5,9 +5,27 @@
  * Функция должна возвращать массив простых чисел от 2 до n.
  * 
 */
+function isPrime(n) {
+    if (n > 1) {
+        for (let i = 2; i < n; i++) {
+            if (n % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    return false;
+}
 
 function primes(num) {
     // Напишите код здесь
+    const result = [];
+    for (let i = 2; i <= num; i++) {
+        if (isPrime(i)) {
+            result.push(i);
+        }
+    }
+    return result;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

@@ -9,10 +9,18 @@
 */
 
 function reverseWords(str) {
+    let array = str.split(' ');
+    let result = '';
+    for(let i = array.length -1; i >= 0; i--) {
+        result = result.concat(array[i], ' ')
+    }
+
+    return result.trim();
+
     // Напишите код здесь
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
-console.log(reverseWords('всегда много путей достичь цель есть')); // "есть цель достичь путей много всегда"
-console.log(reverseWords('испробовать их все должны вы')); // "вы должны все их испробовать"
+console.log(reverseWords('всегда много  путей достичь цель есть')); // "есть цель достичь путей много всегда"
+console.log(reverseWords('испробовать их все должны   вы')); // "вы должны все их испробовать"

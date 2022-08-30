@@ -9,6 +9,15 @@
 
 function intersection(arr1, arr2) {
     // Напишите код здесь
+    const result = [];
+    arr1.forEach(element => {
+        if (arr2.includes(element)) {
+            if (!result.includes(element)) {
+                result.push(element);
+            }
+        }
+    });
+    return result;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

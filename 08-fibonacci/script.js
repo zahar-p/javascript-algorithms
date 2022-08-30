@@ -9,9 +9,30 @@
 */
 
 function fibonacci(n) {
+
+    if(n < 3 ) {
+        return n -1 ;
+    }
+
+    let prev0 = 0;
+    let prev1 = 1;
+    let sum = 0;
+    let cnt = n -2;
+
+    while (cnt > 0) {
+        sum = prev0 + prev1;
+        prev0 = prev1;
+        prev1 = sum;
+        cnt--;
+    }
+
+    return sum; 
     // Напишите код здесь
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
+console.log(fibonacci(1)); 
+console.log(fibonacci(2));
+console.log(fibonacci(3));
 console.log(fibonacci(4)); // 2. Четвёртое число последовательности — двойка (0, 1, 1, 2)

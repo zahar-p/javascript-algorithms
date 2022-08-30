@@ -7,7 +7,19 @@
 */
 
 function countZeros(n) {
+    let result = 0;
     // Напишите код здесь
+    for (let i = 1; i <= n; i++) {
+        const s = i.toString();
+        s.split('').forEach(element => {
+            if (element === '0') {
+                result++;
+            }
+        }
+        )
+    }
+
+    return result;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
